@@ -177,7 +177,7 @@ class WdioTeamcityReporter extends WdioReporter {
         case '{capture}':
           return this.options.captureStandardOutput ? 'true' : 'false'
         case '{id}':
-          return this.runnerStat.sessionId + '/' + stats.cid
+          return this.runnerStat.config.flowId
         case '{ms}':
           return stats._duration
         case '{name}':
